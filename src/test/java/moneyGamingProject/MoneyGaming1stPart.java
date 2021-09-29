@@ -45,8 +45,6 @@ public class MoneyGaming1stPart {
 
         checkboxTC.click();
 
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
         Assert.assertTrue(checkboxTC.isSelected());
 
         driver.findElement(By.id("form")).click();
