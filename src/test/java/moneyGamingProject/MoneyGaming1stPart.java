@@ -49,11 +49,9 @@ public class MoneyGaming1stPart {
 
         driver.findElement(By.id("form")).click();
 
-        WebElement expectedMessage = driver.findElement(By.xpath("//*[@id=\"signupForm\"]/fieldset[1]/label[6]"));
+        WebElement expectedMessage = driver.findElement(By.cssSelector("label[for='dob']"));
 
-        expectedMessage.getAttribute("This field is required");
-
-        Assert.assertTrue(expectedMessage.isDisplayed());
+        Assert.assertEquals("This field is required", expectedMessage.getText());
 
     }
     @AfterMethod
